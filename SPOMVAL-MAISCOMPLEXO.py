@@ -158,6 +158,15 @@ def equacao_2d():
     print("\nCoeficientes:")
     print(coef)
 
+    equacao_str = "y = "
+    for i in range(n-1, -1, -1):
+        c = coef[i]
+        if c == 0: continue
+        sinal = "+" if c >= 0 and i != n-1 else ""
+        grau = f"x^{i}" if i > 1 else ("x" if i == 1 else "")
+        equacao_str += f" {sinal} {c:.4f}{grau}"
+    print("Equação da curva: " + equacao_str)
+    
     # GRÁFICO
     xs = [p[0] for p in pontos]
     ys = [p[1] for p in pontos]
@@ -210,7 +219,12 @@ def equacao_3d():
     a, b2, c, d, e, f = coef
 
     print("\nCoeficientes:")
-    print(f"a={a}, b={b2}, c={c}, d={d}, e={e}, f={f}")
+    print(f"a={a:.2f}, b={b2:.2f}, c={c:.2f}, d={d:.2f}, e={e:.2f}, f={f:.2f}")
+    
+    # Formata para mascara z = ax^2 + by^2 + ...
+    geo_str = f"z = {a:.4f}x^2 + {b2:.4f}y^2 + {c:.4f}xy + {d:.4f}x + {e:.4f}y + {f:.4f}"
+    # Remover sinais de +- 
+    print(f"\nFomula: {geo_str}")
 
     # GRÁFICO 3D
     fig = plt.figure()
@@ -259,3 +273,4 @@ while True:
         break
     else:
         print("Opção inválida!")
+
