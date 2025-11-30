@@ -49,7 +49,7 @@ Para executar este projeto, é necessário ter o Python 3 instalado, juntamente 
 1.  Clone o repositório:
 
     bash
-     git clone https://github.com/KethelynAlves/-Projeto-Curvas-e-Superficies-por-Pontos-Especificados
+     git clone https://github.com/KethelynAlves/Projeto-Curvas-e-Superficies-por-Pontos-Especificados
     
 
 2.  Instale as dependências:
